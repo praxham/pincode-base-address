@@ -2,6 +2,10 @@ import { Hono } from "hono";
 
 const app = new Hono();
 
+app.get("/", async (c) => {
+  return c.text("Get base address for pincode");
+});
+
 app.get("/api/v1/fromPincode/getBaseAddress/:pincode", async (c) => {
   const pincode = c.req.param("pincode");
   let district;
