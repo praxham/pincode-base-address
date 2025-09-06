@@ -26,6 +26,7 @@ GET /api/getBaseAddress/400083
     "Kannamwar Nagar",
     "Tagore Nagar"
   ],
+  "pincode": "400083",
   "country": "India"
 }
 ```
