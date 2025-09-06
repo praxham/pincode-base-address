@@ -22,10 +22,7 @@ GET /api/getBaseAddress/400083
   ],
   "district": "Mumbai",
   "state": "Maharashtra",
-  "areas": [
-    "Kannamwar Nagar",
-    "Tagore Nagar"
-  ],
+  "areas": ["Kannamwar Nagar", "Tagore Nagar"],
   "pincode": "400083",
   "country": "India"
 }
@@ -38,3 +35,7 @@ GET /api/getBaseAddress/400083
   "error": "Pincode not found or invalid"
 }
 ```
+
+---
+
+**Data Source:** [https://api.postalpincode.in/pincode/](https://api.postalpincode.in/pincode/)
