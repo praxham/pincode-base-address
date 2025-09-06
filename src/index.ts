@@ -9,7 +9,7 @@ app.get("/", (c) => {
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Pincode API Usage</title>
+      <title>Base Address from Pincode API</title>
       <style>
         body {
           font-family: Arial, sans-serif;
