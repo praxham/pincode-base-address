@@ -1,6 +1,9 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 
 const app = new Hono();
+
+app.use("/*", cors());
 
 app.get("/", (c) => {
   return c.html(`
@@ -76,7 +79,7 @@ app.get("/api/getBaseAddress/:pincode", async (c) => {
   let country;
   try {
     const response = await fetch(
-      `https://api.postalpincode.in/pincode/${pincode}`
+      `https://api.postalpincode.in/pincode/${pincode}`,
     );
     if (!response.ok) {
       return c.json({ error: "Failed to fetch pincode details" }, 500);
@@ -95,9 +98,9 @@ app.get("/api/getBaseAddress/:pincode", async (c) => {
         }) => {
           const { District, State, Name, Country } = areas;
           baseAddresses.push(
-            `${Name}, ${District}-${pincode}, ${State}, ${Country}`
+            `${Name}, ${District}-${pincode}, ${State}, ${Country}`,
           );
-        }
+        },
       );
       const { District, State, Country } = data[0].PostOffice[0];
       district = District;
